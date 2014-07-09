@@ -10,11 +10,11 @@ clear
 
 ACTUAL=`java -cp bin Solution < in${test}.txt`
 EXPECTED=`cat out${test}.txt`
-[ ${ACTUAL} == ${EXPECTED} ] && SUCCESS=1 || SUCCESS=0
+[ "${ACTUAL}" == "${EXPECTED}" ] && SUCCESS=1 || SUCCESS=0
 
 echo ''
 echo 'actual  : '${ACTUAL}
 echo 'expected: '${EXPECTED}
 echo ''
-[ ${SUCCESS} == 1 ] && echo 'Success!' || echo 'Fail!'
+[ "${SUCCESS}" == "1" ] && echo 'Success!' || echo 'Fail!'
 echo ''
